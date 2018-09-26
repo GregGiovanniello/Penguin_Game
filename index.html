@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang ="en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Penguin Game</title>
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body onload="yetiGame()">
+	<!-- This is the frame for our game. It holds and centers all other elements. -->
+	<div id="gameholder">
+		<div id="title"></div>
+		<div class="mound1"></div>
+		<div class="mound2"></div>
+		<div class="mound3"></div>
+		<div class="mound4"></div>
+		<div class="mound5"></div>
+		<div class="mound6"></div>
+		<div class="mound7"></div>
+		<div class="mound8"></div>
+		<div class="mound9"></div>
+	</div>
+	<script>
+		
+  	function yetiGame() {
+		var game = Math.floor(Math.random() * 9) + 2;
+		document.getElementsByTagName("div")[game].setAttribute("id","yeti"); 
+		
+		document.getElementById("yeti").addEventListener("click", function() {
+			alert("ROWWRR! I'M THE YETI, YOU LOSE!!");
+		}, false);
+	}
+		
+	</script>
+</body>
+</html>
